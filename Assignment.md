@@ -28,7 +28,7 @@ const calculator = new Calculator();
 calculator.divideNumbers(10, 2);
 
 //calculator.divideNumbers(10, 0); fail
-
+``` typescript
 ## Test
  *Here in this example, this program will pass in some tests but with some tests, it will fail. *
 
