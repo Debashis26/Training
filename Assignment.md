@@ -1,20 +1,14 @@
 # What are the 4 rules of simple design?
 
-**1.Test**  
-
-**2.DRY**  
-
-**3.Express Intent**  
-
-**4.Small**  
-
+1. **Test**
+2. **DRY**
+3. **Express Intent**
+4. **Small**
 
 Example
 =======
-
 ```typescript
-
-    class Calculator {
+class Calculator {
   addNumbers(a: number, b: number) {
     console.log(a + b);
   }
@@ -28,25 +22,19 @@ Example
     console.log(a / b);
   }
 }
-
 const calculator = new Calculator();
 calculator.divideNumbers(10, 2);
+//calculator.divideNumbers(10, 0); // fail
 
-//calculator.divideNumbers(10, 0); fail
+``` typescript
+## Test
+ *Here in this example, this program will pass in some tests but with some tests, it will fail. *
 
-Test
-----
- __Here in this example, this program will pass in some tests but with some tests, it will fail__
+## DRY
+* In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design.*
 
-DRY
----
-** In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design **
-
-Express Intent
---------------
+##Express Intent
 
 
-Small
------
-** In this code block every Function performing more than one work **
-
+##Small
+* In this code block every Function performing more than one work*
