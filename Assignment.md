@@ -36,7 +36,7 @@ calculator.divideNumbers(10, 2);
 
 Test
 ----
- **Here in this example, this program will pass in some tests but with some tests, it will fail **
+ __Here in this example, this program will pass in some tests but with some tests, it will fail__
 
 DRY
 ---
