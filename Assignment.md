@@ -33,16 +33,20 @@ const calculator = new Calculator();
 calculator.divideNumbers(10, 2);
 
 //calculator.divideNumbers(10, 0); fail
-``` typescript
-## Test
- *Here in this example, this program will pass in some tests but with some tests, it will fail. *
 
-## DRY
-* In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design.*
+Test
+----
+ **Here in this example, this program will pass in some tests but with some tests, it will fail. **
 
-##Express Intent
+DRY
+---
+** In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design. **
+
+Express Intent
+--------------
 
 
-##Small
-* In this code block every Function performing more than one work*
+Small
+-----
+** In this code block every Function performing more than one work **
 
