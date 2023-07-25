@@ -1,9 +1,13 @@
 # What are the 4 rules of simple design?
 
-**1.Test**
-**2.DRY**
-**3.Express Intent**
-**4.Small**
+**1.Test**  
+
+**2.DRY**  
+
+**3.Express Intent**  
+
+**4.Small**  
+
 
 ##Example
 
