@@ -36,11 +36,11 @@ calculator.divideNumbers(10, 2);
 
 Test
 ----
- **Here in this example, this program will pass in some tests but with some tests, it will fail. **
+ **Here in this example, this program will pass in some tests but with some tests, it will fail **
 
 DRY
 ---
-** In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design. **
+** In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design **
 
 Express Intent
 --------------
