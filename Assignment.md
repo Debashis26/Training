@@ -5,36 +5,16 @@
 3. **Express Intent**
 4. **Small**
 
-Example
-=======
-```typescript
-class Calculator {
-  addNumbers(a: number, b: number) {
-    console.log(a + b);
-  }
-  subNumbers(a: number, b: number) {
-    console.log(a - b);
-  }
-  MulNumbers(a: number, b: number) {
-    console.log(a * b);
-  }
-  divideNumbers(a: number, b: number) {
-    console.log(a / b);
-  }
-}
-const calculator = new Calculator();
-calculator.divideNumbers(10, 2);
-//calculator.divideNumbers(10, 0); // fail
+# What is simple designing ?
 
-``` typescript
-## Test
- *Here in this example, this program will pass in some tests but with some tests, it will fail. *
+Complexity can really hold you back when developing software. So the simplest solutions are the best when building robust and efficient systems. Simple design is a fundamental principle that can help designers create effective, easy-to-use products. But what does it mean to design simply, and how can we achieve it?
 
-## DRY
-* In this program, we write the print statement several times and every time it is performing the same task. So it is against the 2nd rule of simple design.*
+        In 2014 Corey Haines published the book “Understanding the 4 Rules of Simple Design” where he
+described about the 4 rules of simple designing .
 
-##Express Intent
+**The rules **
 
-
-##Small
-* In this code block every Function performing more than one work*
+1. Tests pass
+2. Expresses intend
+3. No duplication (DRY)
+4. Small
