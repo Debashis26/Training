@@ -79,4 +79,24 @@ This command is your general-purpose branch administration tool. It lets you cre
 
 ```$ git branch -m <renamed-branch-name>``` : Rename the current branch to < renamed-branch-name>.  
 
-```$ git branch -a```:  List all remote branches.
+```$ git branch -a```:  List all remote branches.  
+
+*Creating remote branches*  
+```$ git remote add <ref-name > <url> ``` :Add remote repo to local repo config.  
+```$  git push <ref-name> <branch-name >``` :
+ push the < branch-name> to < ref-name >  
+
+**👉 Working with existing project**  
+
+**Clone repo :**   
+Creates a copy of an existing Git repository. Cloning is the most common way for developers to obtain a working copy of a central repository.  
+*command :* ```$ git clone <repo-url >```
+
+**Pull from repo :**  
+Pulling is the automated version of git fetch. It downloads a branch from a remote repository, then immediately merges it into the current branch.
+
+*command :* ```$ git pull < remote-name > < branch-name >```   
+  
+**Fetch from repo :**   
+Fetching downloads a branch from another repository, along with all of its associated commits and files. But, it doesn't try to integrate anything into your local repository. This gives you a chance to inspect changes before merging them with your project.
+
