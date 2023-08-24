@@ -61,4 +61,22 @@ add all untracked file at once-
 [Q. what is the role of . in git add . ?](https://www.designcise.com/web/tutorial/what-does-git-add-dot-do#:~:text=The%20dot%20in%20the%20git,in%20directories%20above%20and%20below)  
 The dot in the git add . command is simply a pathspec (which may also be a filepath), that tells git to only look for changed files in the current directory (i.e. it omits paths found in directories above and below).    
 
-**Git commit**
+**Git commit**  
+Takes the staged snapshot and commits it to the project history. Combined with git add, this defines the basic workflow for all Git users.  
+*command :* ```$ git commit -m  "commit message"```  
+
+**Git branch**  
+This command is your general-purpose branch administration tool. It lets you create isolated development environments within a single repository.
+
+*Common Options:*   
+```$ git branch ```:  List all of the branches in your repository. This is synonymous with ```$ git branch --list```.  
+
+```$ git branch <branch-name> ```: Create a new branch called < branch-name >. This does not check out the new branch.  
+
+```$ git branch -d <existing-branch-name> ```: Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.  
+
+```$ git branch -D <existing-branch-name>``` : Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.
+
+```$ git branch -m <renamed-branch-name>``` : Rename the current branch to < renamed-branch-name>.  
+
+```$ git branch -a```:  List all remote branches.
