@@ -85,7 +85,7 @@ This command is your general-purpose branch administration tool. It lets you cre
 ```$ git remote add <ref-name > <url> ``` :Add remote repo to local repo config.  
 ```$  git push <ref-name> <branch-name >``` :
  push the < branch-name> to < ref-name >  
-
+****
 **👉 Working with existing project**  
 
 **Clone repo :**   
@@ -100,3 +100,13 @@ Pulling is the automated version of git fetch. It downloads a branch from a remo
 **Fetch from repo :**   
 Fetching downloads a branch from another repository, along with all of its associated commits and files. But, it doesn't try to integrate anything into your local repository. This gives you a chance to inspect changes before merging them with your project.
 
+*command :* ```$ git fetch ```   
+
+**Git merge**
+A powerful way to integrate changes from divergent branches. After forking the project history with git branch, git merge lets you put it back together again.  
+*command :* ```$ git merge ```   
+
+**👉 Push the files to remote repo**  
+
+**Git push :**  
+The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo.
