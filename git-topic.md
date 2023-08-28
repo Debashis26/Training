@@ -1,4 +1,4 @@
-### Git
+# Git
 
 [**What is git ?**](https://git-scm.com/)  
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
@@ -51,9 +51,9 @@ Displays the state of the working directory and the staged snapshot. You’ll wa
 Moves changes from the working directory to the staging area. This gives you the opportunity to prepare a snapshot before committing it to the official history.
 
 add selected untracked file-  
- ```$ git add file1.txt```  
+ ```$ git add file1```  
 or  
- ```$ git add file1 file2 file 3``` 
+ ```$ git add file1 file2 file3``` 
 
 add all untracked file at once-  
 ```$ git add .```    
