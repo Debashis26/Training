@@ -26,7 +26,9 @@ Bazaar or Darcs), clients don’t just check out the latest snapshot of the file
 mirror the repository, including its full history.  
 Thus, if any server dies, and these systems were
 collaborating via that server, any of the client repositories can be copied back up to the server to
-restore it. Every clone is really a full backup of all the data.  
+restore it. Every clone is really a full backup of all the data.    
+
+## Git Operationstouch
 
 [**Basic Operation**](https://www.atlassian.com/git/glossary)  
 
@@ -159,3 +161,5 @@ In summary, Git Flow provides a structured approach with distinct branches for d
 
 <img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>*Trunk based Development*  
 
+## [Bash](https://www.educative.io/blog/bash-shell-command-cheat-sheet)   
+  
