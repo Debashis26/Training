@@ -161,5 +161,7 @@ In summary, Git Flow provides a structured approach with distinct branches for d
 
 <img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>*Trunk based Development*  
 
-## [Bash](https://www.educative.io/blog/bash-shell-command-cheat-sheet)   
-  
+## [Bash](https://www.educative.io/blog/bash-shell-command-cheat-sheet) 
+
+
+
