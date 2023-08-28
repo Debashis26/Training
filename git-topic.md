@@ -85,7 +85,7 @@ This command is your general-purpose branch administration tool. It lets you cre
 ```$ git remote add <ref-name > <url> ``` :Add remote repo to local repo config.  
 ```$  git push <ref-name> <branch-name >``` :
  push the < branch-name> to < ref-name >  
-
+****
 **👉 Working with existing project**  
 
 **Clone repo :**   
@@ -99,4 +99,63 @@ Pulling is the automated version of git fetch. It downloads a branch from a remo
   
 **Fetch from repo :**   
 Fetching downloads a branch from another repository, along with all of its associated commits and files. But, it doesn't try to integrate anything into your local repository. This gives you a chance to inspect changes before merging them with your project.
+
+*command :* ```$ git fetch ```   
+
+**Git merge**
+A powerful way to integrate changes from divergent branches. After forking the project history with git branch, git merge lets you put it back together again.  
+*command :* ```$ git merge ```   
+
+**👉 Push the files to remote repo**  
+
+**Git push :**  
+The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo.  
+*Command :* ```$ git push < remote-name > < branch-name>```  
+
+[**Git strategy**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)  
+
+Git Flow and Trunk Based Development are two different approaches to managing version control and the development workflow in software projects. They have different philosophies and implications for how code is managed, integrated, and released within a development team.
+
+**Git Flow:**  
+Git Flow is a branching model for Git that defines a specific branching strategy and workflow for managing code changes. It was popularized by Vincent Driessen in a blog post. The main idea behind Git Flow is to provide a structured approach to managing different stages of development and releases. It involves several long-lived branches:
+
+*Master/Branch:*  
+The master branch represents the stable codebase. It's intended to always contain production-ready code.
+
+*Develop/Branch:*  
+The develop branch is where ongoing development takes place. Feature branches are typically merged into this branch.
+
+*Feature/Branch:*  
+Feature branches are created for specific features or tasks. They branch off from develop and are merged back into it once the feature is complete.
+
+*Release/Branch:*  
+When preparing for a release, a release branch is created from develop. It's used for finalizing and testing the code before deploying it to production.
+
+*Hotfix/Branch:*  
+If critical bugs are discovered in the production code, a hotfix branch is created from master, the bug is fixed, and the change is merged back into both master and develop.
+
+While Git Flow provides a clear structure for managing development stages, it can lead to longer release cycles and more complex merge processes, especially when dealing with feature branches that diverge significantly over time.
+
+**Trunk Based Development:**  
+Trunk Based Development is an approach that promotes simpler and more frequent integration of code changes. The main principle is to keep the master branch (or a similar mainline branch) in a releasable state at all times. Developers work directly on short-lived feature branches and integrate their changes into the mainline branch multiple times a day. This approach encourages smaller, more incremental changes and aims to reduce merge conflicts.
+
+In Trunk Based Development:  
+
+*Feature/Branch*:  
+Developers create short-lived feature branches for specific tasks or features. These branches are integrated into the mainline branch as soon as they're ready.
+
+*Mainline/Branch:*  
+The mainline branch, often referred to as master, is always in a state that could potentially be released. Integration happens frequently and is usually automated through continuous integration tools.
+
+Trunk Based Development aims to minimize the overhead of managing multiple long-lived branches and encourages a fast-paced development cycle. However, it requires a strong focus on automated testing and continuous integration to ensure that the mainline remains stable.
+
+In summary, Git Flow provides a structured approach with distinct branches for different development stages, while Trunk Based Development promotes frequent integration into a stable mainline branch. The choice between these approaches depends on the team's development philosophy, the nature of the project, and the development practices they wish to adopt.
+
+[By ChatGPT](https://chat.openai.com/share/f0a48459-e26d-4eb0-97b2-af9c53412dac)  
+
+ 
+
+<img src="https://lanziani.com/slides/gitflow/images/gitflow_1.png" alt="Description of the image" style="width:450px; height:300px;"><br/>*git flow*  
+
+<img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>*Trunk based Development*  
 
