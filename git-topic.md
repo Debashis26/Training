@@ -161,7 +161,155 @@ In summary, Git Flow provides a structured approach with distinct branches for d
 
 <img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>*Trunk based Development*  
 
-## [Bash](https://www.educative.io/blog/bash-shell-command-cheat-sheet) 
+## Bash  
+
+
+
+Bash is a shell program, which is basically a command line interpreter that typically runs in a text window where user can intract with the system by writing the  command or script. It is a type of Unix like shell. 
+
+**Shell :**  
+it is the Command Line Interface (CLI) used to intract with the system resources directely.  
+
+[**Basic Bash Command**](https://www.educative.io/blog/bash-shell-command-cheat-sheet)  
+
+1. ```ls``` :  list the files and directories in the current directory. 
+   ```Bash
+   $ ls
+   ```  
+
+2. ```mkdir``` - create a new directory.  
+   ```Bash
+   $ mkdir <dir-name>
+   ```   
+3. ```cd``` - change the current directory.  
+   ```Bash
+   $ cd <dir-name>
+   ```  
+4. ```rmdir``` - remove a directory
+   ```Bash
+   $ rmdir <dir-name>
+   ```  
+5. ```pwd``` - print the current working directory  
+   ```Bash
+   $ pwd
+   ```   
+6. `cp` - copy files or directories  
+   ```Bash
+   #We will copy a file called #example.txt from the current directory to a directory called backup   
+
+   $ cp example.txt backup/
+   ```
+7. ```mv``` - move or rename files or directories
+    ```Bash
+   $ mv < file-path/name> <destination-path >
+    ``` 
+8. ```rm``` - remove files or directories
+   ```Bash
+   $ rm <file-name>
+   ```
+9. ```touch``` - create a new empty file or update the timestamp of an existing file  
+    ```Bash
+    $ touch <file-name>
+    ```  
+10.  ``cat`` - concatenate and display files  
+    
+      ```Bash
+      $ cat <file-name>
+      ```
+11. ```htop``` - an interactive process viewer and system monitor
+    ```Bash
+    $ htop
+    ```
+12. `ping` - test network connectivity
+    ```Bash
+    $ ping www.googlee.com
+    ```
+13. `ifconfig` - display or configure network interfaces
+    ```Bash
+    $ ifconfig
+    ```
+14. `netstat` - display network connection information
+    ```Bash
+    $ netstat
+    ```
+15. `top` - display system resource usage and processes
+    ```Bash
+    $ top
+    ```
+16. `su` - switch user to become another user
+    ```Bash
+    $ su <user-name>
+    ```
+17. `sudo` - execute a command as another user or with elevated privileges
+    ```Bash
+    $ sudo
+    ```
+18. `df` - display disk space usage
+    ```Bash
+    $ df
+    ```
+19. `du` - display disk usage by file or directory
+    ```Bash
+    $ du
+    ```
+20. date - display or set the system date and time
+   ```Bash
+   $ date
+   ```
+21. `finger` - displays all the information about user
+    ```Bash
+    $ finger <user-name>
+    ```
+22. `history` - display a list of previously executed commands
+    ```Bash
+    $ history
+    ```
+23. `echo` - display text or variables to the console
+    ```Bash
+    $ echo <text>
+    ```
+24. `locate` - locate any file on the system
+    ```Bash
+    $ locate <file-name>
+    ```
+25. `cat` - display the content of the file.
+    ```Bash
+    $ cat <path/file-name>
+    ```
+26. `Vim` is a text editor used to create, edit the text file.
+    ```Bash
+    # create new file
+    $ vim <file-name.txt>
+    ```
+    ```Bash
+    # view the content
+    $ vim <file-name>
+    ```
+    ```Bash
+    # view the content
+    $ vim <file-name>
+    ```
+   *note:*   
+   i. If you want to edit the the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.  
+
+   ii. Save the file and exit from the editor: To save and exit from it, you can press the [Esc] key and the ‘:wq.’.  
+
+   iii. `Esc +:w` – Save the file but do not exit.  
+   `Esc +:q!` – To quit the file without first saving what you were working on.  
+   `Esc +:wq` – To save the file and exit from Vim.  
+
+   
+
+
+
+
+
+
+
+
+
+
+
 
 
 
