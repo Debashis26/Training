@@ -285,10 +285,7 @@ it is the Command Line Interface (CLI) used to intract with the system resources
     # view the content
     $ vim <file-name>
     ```
-    ```Bash
-    # view the content
-    $ vim <file-name>
-    ```
+   
    *note:*   
    i. If you want to edit the the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.  
 
