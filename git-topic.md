@@ -8,7 +8,7 @@ Version control is a system that records changes to a file or set of files over 
 
 _Local Version Control system_  
  Copy files to an another directory is the easyest way to do version controlling, but it can also error prone.  
- To deal with thiss issue, programmersmlong ago developed local VCSs that had a simpple database that kept all the changes happens with the file under version control system.
+ To deal with thiss issue, programmers long ago developed local VCSs that had a simpple database that kept all the changes happens with the file under version control system.
 
 _Centralized Version Control System_
 
