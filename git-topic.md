@@ -1,139 +1,141 @@
 # Git
 
 [**What is git ?**](https://git-scm.com/)  
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
-[ **Version control** ](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)   
-Version control is a system that records changes to a file or set of files over time so that we can recall specific versions latter.  
+[ **Version control** ](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)  
+Version control is a system that records changes to a file or set of files over time so that we can recall specific versions latter.
 
- *Local Version Control system*   
+_Local Version Control system_  
  Copy files to an another directory is the easyest way to do version controlling, but it can also error prone.  
- To deal with thiss issue, programmersmlong ago developed local VCSs that had a simpple database that kept all the changes happens with the file under version control system.  
+ To deal with thiss issue, programmers long ago developed local VCSs that had a simpple database that kept all the changes happens with the file under version control system.
 
- *Centralized Version Control System*  
+_Centralized Version Control System_
 
- The next major issue that people encounter is that, they need to collaborate with developers on other syatem. To deal with this problem *Centralized Verson control (CVCSs)* is interduced.  
+The next major issue that people encounter is that, they need to collaborate with developers on other syatem. To deal with this problem _Centralized Verson control (CVCSs)_ is interduced.
 
 The system have a single server that contains
 all the versioned files, and a number of clients that check out files from that central place. For many
 years, this has been the standard for version control.  
-This setup also has some serious downsides. The most obvious is the single point of failure. If that server goes down, then during this time nobody can collaborate at all or save versioned changes to anything they’re working on.  
+This setup also has some serious downsides. The most obvious is the single point of failure. If that server goes down, then during this time nobody can collaborate at all or save versioned changes to anything they’re working on.
 
-*Distributed Version Control Systems*  
-  
+_Distributed Version Control Systems_
+
 This is where Distributed Version Control Systems (DVCSs) step in.In a DVCS (such as Git, Mercurial,
 Bazaar or Darcs), clients don’t just check out the latest snapshot of the files; rather, they fully
 mirror the repository, including its full history.  
 Thus, if any server dies, and these systems were
 collaborating via that server, any of the client repositories can be copied back up to the server to
-restore it. Every clone is really a full backup of all the data.    
+restore it. Every clone is really a full backup of all the data.
 
 ## Git Operationstouch
 
-[**Basic Operation**](https://www.atlassian.com/git/glossary)  
+[**Basic Operation**](https://www.atlassian.com/git/glossary)
 
-**Git Config :** 
-   The [```git config```](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.) command is a convenience function that is used to set Git configuration values on a global or local project level.   
-   *command*  
-   user.name- ```$ git config --global user.name "Your Name Comes Here"```
+**Git Config :**
+The [`git config`](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.) command is a convenience function that is used to set Git configuration values on a global or local project level.  
+ _command_  
+ user.name- `$ git config --global user.name "Your Name Comes Here"`
 
-   user.email- ```$ git config --global user.email "you@yourdomain.example.com"```  
+user.email- `$ git config --global user.email "you@yourdomain.example.com"`
 
 **👉 Working with new project**
 
 **1.Git init :**  
 Initializes a new Git repository. If you want to place a project under revision control.  
-*command:* ```$ git init```  
+_command:_ `$ git init`
 
 **Git status :**  
 Displays the state of the working directory and the staged snapshot. You’ll want to run this in conjunction with git add and git commit to see exactly what’s being included in the next snapshot.  
-*command :* ```$ git status```  
+_command :_ `$ git status`
 
 **Git add**  
 Moves changes from the working directory to the staging area. This gives you the opportunity to prepare a snapshot before committing it to the official history.
 
 add selected untracked file-  
- ```$ git add file1```  
+ `$ git add file1`  
 or  
- ```$ git add file1 file2 file3``` 
+ `$ git add file1 file2 file3`
 
 add all untracked file at once-  
-```$ git add .```    
+`$ git add .`
 
 [Q. what is the role of . in git add . ?](https://www.designcise.com/web/tutorial/what-does-git-add-dot-do#:~:text=The%20dot%20in%20the%20git,in%20directories%20above%20and%20below)  
-The dot in the git add . command is simply a pathspec (which may also be a filepath), that tells git to only look for changed files in the current directory (i.e. it omits paths found in directories above and below).    
+The dot in the git add . command is simply a pathspec (which may also be a filepath), that tells git to only look for changed files in the current directory (i.e. it omits paths found in directories above and below).
 
 **Git commit**  
 Takes the staged snapshot and commits it to the project history. Combined with git add, this defines the basic workflow for all Git users.  
-*command :* ```$ git commit -m  "commit message"```  
+_command :_ `$ git commit -m  "commit message"`
 
 **Git branch**  
 This command is your general-purpose branch administration tool. It lets you create isolated development environments within a single repository.
 
-*Common Options:*   
-```$ git branch ```:  List all of the branches in your repository. This is synonymous with ```$ git branch --list```.  
+_Common Options:_  
+`$ git branch `: List all of the branches in your repository. This is synonymous with `$ git branch --list`.
 
-```$ git branch <branch-name> ```: Create a new branch called < branch-name >. This does not check out the new branch.  
+`$ git branch <branch-name> `: Create a new branch called < branch-name >. This does not check out the new branch.
 
-```$ git branch -d <existing-branch-name> ```: Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.  
+`$ git branch -d <existing-branch-name> `: Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.
 
-```$ git branch -D <existing-branch-name>``` : Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.
+`$ git branch -D <existing-branch-name>` : Force delete the specified branch, even if it has unmerged changes. This is the command to use if you want to permanently throw away all of the commits associated with a particular line of development.
 
-```$ git branch -m <renamed-branch-name>``` : Rename the current branch to < renamed-branch-name>.  
+`$ git branch -m <renamed-branch-name>` : Rename the current branch to < renamed-branch-name>.
 
-```$ git branch -a```:  List all remote branches.  
+`$ git branch -a`: List all remote branches.
 
-*Creating remote branches*  
-```$ git remote add <ref-name > <url> ``` :Add remote repo to local repo config.  
-```$  git push <ref-name> <branch-name >``` :
- push the < branch-name> to < ref-name >  
-****
-**👉 Working with existing project**  
+_Creating remote branches_  
+`$ git remote add <ref-name > <url> ` :Add remote repo to local repo config.  
+`$  git push <ref-name> <branch-name >` :
+push the < branch-name> to < ref-name >
 
-**Clone repo :**   
+---
+
+**👉 Working with existing project**
+
+**Clone repo :**  
 Creates a copy of an existing Git repository. Cloning is the most common way for developers to obtain a working copy of a central repository.  
-*command :* ```$ git clone <repo-url >```
+_command :_ `$ git clone <repo-url >`
 
 **Pull from repo :**  
 Pulling is the automated version of git fetch. It downloads a branch from a remote repository, then immediately merges it into the current branch.
 
-*command :* ```$ git pull < remote-name > < branch-name >```   
-  
-**Fetch from repo :**   
+_command :_ `$ git pull < remote-name > < branch-name >`
+
+**Fetch from repo :**  
 Fetching downloads a branch from another repository, along with all of its associated commits and files. But, it doesn't try to integrate anything into your local repository. This gives you a chance to inspect changes before merging them with your project.
 
-*command :* ```$ git fetch ```   
+_command :_ `$ git fetch `
 
 **Git merge**
 A powerful way to integrate changes from divergent branches. After forking the project history with git branch, git merge lets you put it back together again.  
-*command :* ```$ git merge ```   
+_command :_ `$ git merge `
 
-**👉 Push the files to remote repo**  
+**👉 Push the files to remote repo**
 
 **Git push :**  
 The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo.  
-*Command :* ```$ git push < remote-name > < branch-name>```  
+_Command :_ `$ git push < remote-name > < branch-name>`
 
-[**Git strategy**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)  
+[**Git strategy**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 Git Flow and Trunk Based Development are two different approaches to managing version control and the development workflow in software projects. They have different philosophies and implications for how code is managed, integrated, and released within a development team.
 
 **Git Flow:**  
 Git Flow is a branching model for Git that defines a specific branching strategy and workflow for managing code changes. It was popularized by Vincent Driessen in a blog post. The main idea behind Git Flow is to provide a structured approach to managing different stages of development and releases. It involves several long-lived branches:
 
-*Master/Branch:*  
+_Master/Branch:_  
 The master branch represents the stable codebase. It's intended to always contain production-ready code.
 
-*Develop/Branch:*  
+_Develop/Branch:_  
 The develop branch is where ongoing development takes place. Feature branches are typically merged into this branch.
 
-*Feature/Branch:*  
+_Feature/Branch:_  
 Feature branches are created for specific features or tasks. They branch off from develop and are merged back into it once the feature is complete.
 
-*Release/Branch:*  
+_Release/Branch:_  
 When preparing for a release, a release branch is created from develop. It's used for finalizing and testing the code before deploying it to production.
 
-*Hotfix/Branch:*  
+_Hotfix/Branch:_  
 If critical bugs are discovered in the production code, a hotfix branch is created from master, the bug is fixed, and the change is merged back into both master and develop.
 
 While Git Flow provides a clear structure for managing development stages, it can lead to longer release cycles and more complex merge processes, especially when dealing with feature branches that diverge significantly over time.
@@ -141,82 +143,82 @@ While Git Flow provides a clear structure for managing development stages, it ca
 **Trunk Based Development:**  
 Trunk Based Development is an approach that promotes simpler and more frequent integration of code changes. The main principle is to keep the master branch (or a similar mainline branch) in a releasable state at all times. Developers work directly on short-lived feature branches and integrate their changes into the mainline branch multiple times a day. This approach encourages smaller, more incremental changes and aims to reduce merge conflicts.
 
-In Trunk Based Development:  
+In Trunk Based Development:
 
-*Feature/Branch*:  
+_Feature/Branch_:  
 Developers create short-lived feature branches for specific tasks or features. These branches are integrated into the mainline branch as soon as they're ready.
 
-*Mainline/Branch:*  
+_Mainline/Branch:_  
 The mainline branch, often referred to as master, is always in a state that could potentially be released. Integration happens frequently and is usually automated through continuous integration tools.
 
 Trunk Based Development aims to minimize the overhead of managing multiple long-lived branches and encourages a fast-paced development cycle. However, it requires a strong focus on automated testing and continuous integration to ensure that the mainline remains stable.
 
 In summary, Git Flow provides a structured approach with distinct branches for different development stages, while Trunk Based Development promotes frequent integration into a stable mainline branch. The choice between these approaches depends on the team's development philosophy, the nature of the project, and the development practices they wish to adopt.
 
-[By ChatGPT](https://chat.openai.com/share/f0a48459-e26d-4eb0-97b2-af9c53412dac)  
+[By ChatGPT](https://chat.openai.com/share/f0a48459-e26d-4eb0-97b2-af9c53412dac)
 
- 
+<img src="https://lanziani.com/slides/gitflow/images/gitflow_1.png" alt="Description of the image" style="width:450px; height:300px;"><br/>_git flow_
 
-<img src="https://lanziani.com/slides/gitflow/images/gitflow_1.png" alt="Description of the image" style="width:450px; height:300px;"><br/>*git flow*  
+<img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>_Trunk based Development_
 
-<img src="https://convincedcoder.com/images/2019-02-16-Trunk-based-development/feature-branch.png" alt="Description of the image" style="width:550px; height:300px;"><br/>*Trunk based Development*  
+## Bash
 
-## Bash  
-
-
-
-Bash is a shell program, which is basically a command line interpreter that typically runs in a text window where user can intract with the system by writing the  command or script. It is a type of Unix like shell. 
+Bash is a shell program, which is basically a command line interpreter that typically runs in a text window where user can intract with the system by writing the command or script. It is a type of Unix like shell.
 
 **Shell :**  
-it is the Command Line Interface (CLI) used to intract with the system resources directely.  
+it is the Command Line Interface (CLI) used to intract with the system resources directely.
 
-[**Basic Bash Command**](https://www.educative.io/blog/bash-shell-command-cheat-sheet)  
+[**Basic Bash Command**](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
-1. ```ls``` :  list the files and directories in the current directory. 
+1. `ls` : list the files and directories in the current directory.
+
    ```Bash
    $ ls
-   ```  
+   ```
 
-2. ```mkdir``` - create a new directory.  
+2. `mkdir` - create a new directory.
    ```Bash
    $ mkdir <dir-name>
-   ```   
-3. ```cd``` - change the current directory.  
+   ```
+3. `cd` - change the current directory.
    ```Bash
    $ cd <dir-name>
-   ```  
-4. ```rmdir``` - remove a directory
+   ```
+4. `rmdir` - remove a directory
    ```Bash
    $ rmdir <dir-name>
-   ```  
-5. ```pwd``` - print the current working directory  
+   ```
+5. `pwd` - print the current working directory
    ```Bash
    $ pwd
-   ```   
-6. `cp` - copy files or directories  
+   ```
+6. `cp` - copy files or directories
+
    ```Bash
-   #We will copy a file called #example.txt from the current directory to a directory called backup   
+   #We will copy a file called #example.txt from the current directory to a directory called backup
 
    $ cp example.txt backup/
    ```
-7. ```mv``` - move or rename files or directories
-    ```Bash
+
+7. `mv` - move or rename files or directories
+   ```Bash
    $ mv < file-path/name> <destination-path >
-    ``` 
-8. ```rm``` - remove files or directories
+   ```
+8. `rm` - remove files or directories
    ```Bash
    $ rm <file-name>
    ```
-9. ```touch``` - create a new empty file or update the timestamp of an existing file  
+9. `touch` - create a new empty file or update the timestamp of an existing file
+   ```Bash
+   $ touch <file-name>
+   ```
+10. `cat` - concatenate and display files
+
     ```Bash
-    $ touch <file-name>
-    ```  
-10.  ``cat`` - concatenate and display files  
-    
-      ```Bash
-      $ cat <file-name>
-      ```
-11. ```htop``` - an interactive process viewer and system monitor
+    $ cat <file-name>
+    ```
+
+11. `htop` - an interactive process viewer and system monitor
     ```Bash
     $ htop
     ```
@@ -253,9 +255,11 @@ it is the Command Line Interface (CLI) used to intract with the system resources
     $ du
     ```
 20. date - display or set the system date and time
-   ```Bash
-   $ date
-   ```
+
+```Bash
+$ date
+```
+
 21. `finger` - displays all the information about user
     ```Bash
     $ finger <user-name>
@@ -277,36 +281,41 @@ it is the Command Line Interface (CLI) used to intract with the system resources
     $ cat <path/file-name>
     ```
 26. `Vim` is a text editor used to create, edit the text file.
+
     ```Bash
     # create new file
     $ vim <file-name.txt>
     ```
+
     ```Bash
     # view the content
     $ vim <file-name>
     ```
-   
-   *note:*   
-   i. If you want to edit the the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.  
 
-   ii. Save the file and exit from the editor: To save and exit from it, you can press the [Esc] key and the ‘:wq.’.  
+    _note:_  
+    i. If you want to edit the the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.
 
-   iii. `Esc +:w` – Save the file but do not exit.  
-   `Esc +:q!` – To quit the file without first saving what you were working on.  
-   `Esc +:wq` – To save the file and exit from Vim.  
+ii. Save the file and exit from the editor: To save and exit from it, you can press the [Esc] key and the ‘:wq.’.
 
-   
+iii. `Esc +:w` – Save the file but do not exit.  
+ `Esc +:q!` – To quit the file without first saving what you were working on.  
+ `Esc +:wq` – To save the file and exit from Vim.
 
-
+27. `ls -l` - View the details of a file.
 
 
-
-
-
-
-
-
-
-
-
-
+    ```Bash
+    $ ls -l <file name>
+    # "l" option is for long
+    ```
+28. Remove a directory (force) :
+      
+    ```Bash
+    $ rm -r <directory name>
+    ```
+    ```Bash
+    $ rm -rf <directory name>
+    ```
+    ```Bash
+     # The '-r' flag tells the command to remove directories and their contents recursively, and the '-f' flag forces the removal without asking for confirmation.
+    ```
