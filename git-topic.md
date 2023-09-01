@@ -28,7 +28,7 @@ Thus, if any server dies, and these systems are
 collaborating via that server, any of the client repositories can be copied back up to the server to
 restore it. Every clone is really a full backup of all the data.
 
-## Git Operationstouch
+## Git Operations 
 
 [**Basic Operation**](https://www.atlassian.com/git/glossary)
 
