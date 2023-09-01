@@ -1,30 +1,30 @@
 # Git
 
 [**What is git ?**](https://git-scm.com/)  
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+Git is a free and open-source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 [ **Version control** ](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)  
-Version control is a system that records changes to a file or set of files over time so that we can recall specific versions latter.
+Version control is a system that records changes to a file or set of files over time so that we can recall specific versions later.
 
 _Local Version Control system_  
- Copy files to an another directory is the easyest way to do version controlling, but it can also error prone.  
- To deal with thiss issue, programmers long ago developed local VCSs that had a simpple database that kept all the changes happens with the file under version control system.
+ Copy files to another directory is the easiest way to do version control, but it can also be error-prone.  
+ To deal with this issue, programmers long ago developed local VCSs that had a simple database that kept all the changes happening with the file under a version control system.
 
 _Centralized Version Control System_
 
-The next major issue that people encounter is that, they need to collaborate with developers on other syatem. To deal with this problem _Centralized Verson control (CVCSs)_ is interduced.
+The next major issue that people encounter is that they need to collaborate with developers on other systems. To deal with this problem _Centralized Version control (CVCSs)_ is introduced.
 
-The system have a single server that contains
+The system has a single server that contains
 all the versioned files, and a number of clients that check out files from that central place. For many
 years, this has been the standard for version control.  
 This setup also has some serious downsides. The most obvious is the single point of failure. If that server goes down, then during this time nobody can collaborate at all or save versioned changes to anything they’re working on.
 
 _Distributed Version Control Systems_
 
-This is where Distributed Version Control Systems (DVCSs) step in.In a DVCS (such as Git, Mercurial,
+This is where Distributed Version Control Systems (DVCSs) step in. In a DVCS (such as Git, Mercurial,
 Bazaar or Darcs), clients don’t just check out the latest snapshot of the files; rather, they fully
 mirror the repository, including its full history.  
-Thus, if any server dies, and these systems were
+Thus, if any server dies, and these systems are
 collaborating via that server, any of the client repositories can be copied back up to the server to
 restore it. Every clone is really a full backup of all the data.
 
@@ -32,12 +32,14 @@ restore it. Every clone is really a full backup of all the data.
 
 [**Basic Operation**](https://www.atlassian.com/git/glossary)
 
-**Git Config :**
+**Git Config:**
 The [`git config`](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config#:~:text=The%20git%20config%20command%20is,modify%20a%20configuration%20text%20file.) command is a convenience function that is used to set Git configuration values on a global or local project level.  
  _command_  
  user.name- `$ git config --global user.name "Your Name Comes Here"`
 
-user.email- `$ git config --global user.email "you@yourdomain.example.com"`
+user.email- `$ git config --global user.email "you@yourdomain.example.com"`  
+
+To view the configuration- `$ git config --global --list`
 
 **👉 Working with new project**
 
@@ -45,7 +47,7 @@ user.email- `$ git config --global user.email "you@yourdomain.example.com"`
 Initializes a new Git repository. If you want to place a project under revision control.  
 _command:_ `$ git init`
 
-**Git status :**  
+**Git status:**  
 Displays the state of the working directory and the staged snapshot. You’ll want to run this in conjunction with git add and git commit to see exactly what’s being included in the next snapshot.  
 _command :_ `$ git status`
 
@@ -57,15 +59,15 @@ add selected untracked file-
 or  
  `$ git add file1 file2 file3`
 
-add all untracked file at once-  
+Add all untracked files at once-  
 `$ git add .`
 
-[Q. what is the role of . in git add . ?](https://www.designcise.com/web/tutorial/what-does-git-add-dot-do#:~:text=The%20dot%20in%20the%20git,in%20directories%20above%20and%20below)  
-The dot in the git add . command is simply a pathspec (which may also be a filepath), that tells git to only look for changed files in the current directory (i.e. it omits paths found in directories above and below).
+[Q. What is the role of . in git add . ?](https://www.designcise.com/web/tutorial/what-does-git-add-dot-do#:~:text=The%20dot%20in%20the%20git,in%20directories%20above%20and%20below)  
+The dot in the git add . command is simply a path spec (which may also be a filepath), that tells git to only look for changed files in the current directory (i.e. it omits paths found in directories above and below).
 
 **Git commit**  
-Takes the staged snapshot and commits it to the project history. Combined with git add, this defines the basic workflow for all Git users.  
-_command :_ `$ git commit -m  "commit message"`
+Takes the staged snapshot and commits it to the project history. Combined with Git add, this defines the basic workflow for all Git users.  
+_command:_ `$ git commit -m  "commit message"`
 
 **Git branch**  
 This command is your general-purpose branch administration tool. It lets you create isolated development environments within a single repository.
@@ -92,27 +94,27 @@ push the < branch-name> to < ref-name >
 
 **👉 Working with existing project**
 
-**Clone repo :**  
+**Clone repo:**  
 Creates a copy of an existing Git repository. Cloning is the most common way for developers to obtain a working copy of a central repository.  
 _command :_ `$ git clone <repo-url >`
 
-**Pull from repo :**  
-Pulling is the automated version of git fetch. It downloads a branch from a remote repository, then immediately merges it into the current branch.
+**Pull from repo:**  
+Pulling is the automated version of git fetch. It downloads a branch from a remote repository, and then immediately merges it into the current branch.
 
 _command :_ `$ git pull < remote-name > < branch-name >`
 
-**Fetch from repo :**  
+**Fetch from repo:**  
 Fetching downloads a branch from another repository, along with all of its associated commits and files. But, it doesn't try to integrate anything into your local repository. This gives you a chance to inspect changes before merging them with your project.
 
 _command :_ `$ git fetch `
 
 **Git merge**
-A powerful way to integrate changes from divergent branches. After forking the project history with git branch, git merge lets you put it back together again.  
+A powerful way to integrate changes from divergent branches. After forking the project history with the git branch, git merge lets you put it back together again.  
 _command :_ `$ git merge `
 
-**👉 Push the files to remote repo**
+**👉 Push the files to the remote repo**
 
-**Git push :**  
+**Git push:**  
 The git push command is used to upload local repository content to a remote repository. Pushing is how you transfer commits from your local repository to a remote repo.  
 _Command :_ `$ git push < remote-name > < branch-name>`
 
@@ -127,16 +129,16 @@ _Master/Branch:_
 The master branch represents the stable codebase. It's intended to always contain production-ready code.
 
 _Develop/Branch:_  
-The develop branch is where ongoing development takes place. Feature branches are typically merged into this branch.
+The development branch is where ongoing development takes place. Feature branches are typically merged into this branch.
 
 _Feature/Branch:_  
-Feature branches are created for specific features or tasks. They branch off from develop and are merged back into it once the feature is complete.
+Feature branches are created for specific features or tasks. They branch off from development and are merged back into it once the feature is complete.
 
 _Release/Branch:_  
-When preparing for a release, a release branch is created from develop. It's used for finalizing and testing the code before deploying it to production.
+When preparing for a release, a release branch is created from development. It's used for finalizing and testing the code before deploying it to production.
 
 _Hotfix/Branch:_  
-If critical bugs are discovered in the production code, a hotfix branch is created from master, the bug is fixed, and the change is merged back into both master and develop.
+If critical bugs are discovered in the production code, a hotfix branch is created from the master, the bug is fixed, and the change is merged back into both the master and develop.
 
 While Git Flow provides a clear structure for managing development stages, it can lead to longer release cycles and more complex merge processes, especially when dealing with feature branches that diverge significantly over time.
 
@@ -149,7 +151,7 @@ _Feature/Branch_:
 Developers create short-lived feature branches for specific tasks or features. These branches are integrated into the mainline branch as soon as they're ready.
 
 _Mainline/Branch:_  
-The mainline branch, often referred to as master, is always in a state that could potentially be released. Integration happens frequently and is usually automated through continuous integration tools.
+The mainline branch, often referred to as the master, is always in a state that could potentially be released. Integration happens frequently and is usually automated through continuous integration tools.
 
 Trunk Based Development aims to minimize the overhead of managing multiple long-lived branches and encourages a fast-paced development cycle. However, it requires a strong focus on automated testing and continuous integration to ensure that the mainline remains stable.
 
@@ -163,14 +165,14 @@ In summary, Git Flow provides a structured approach with distinct branches for d
 
 ## Bash
 
-Bash is a shell program, which is basically a command line interpreter that typically runs in a text window where user can intract with the system by writing the command or script. It is a type of Unix like shell.
+Bash is a shell program, which is basically a command line interpreter that typically runs in a text window where the user can interact with the system by writing the command or script. It is a type of Unix-like shell.
 
-**Shell :**  
-it is the Command Line Interface (CLI) used to intract with the system resources directely.
+**Shell:**  
+It is the Command Line Interface (CLI) used to interact with the system resources directly.
 
 [**Basic Bash Command**](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
 
-1. `ls` : list the files and directories in the current directory.
+1. `ls`: List the files and directories in the current directory.
 
    ```Bash
    $ ls
@@ -208,7 +210,7 @@ it is the Command Line Interface (CLI) used to intract with the system resources
    ```Bash
    $ rm <file-name>
    ```
-9. `touch` - create a new empty file or update the timestamp of an existing file
+9. `touch` - Create a new empty file or update the timestamp of an existing file
    ```Bash
    $ touch <file-name>
    ```
@@ -293,7 +295,7 @@ $ date
     ```
 
     _note:_  
-    i. If you want to edit the the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.
+    i. If you want to edit the text file, Go to Insert Mode: Press’ I’ from the keyboard to switch from command mode to insert mode. At the bottom of the editor, you can see INSERT.
 
 ii. Save the file and exit from the editor: To save and exit from it, you can press the [Esc] key and the ‘:wq.’.
 
